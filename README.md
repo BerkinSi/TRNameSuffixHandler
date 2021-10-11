@@ -5,7 +5,8 @@ Swift file to help you localize your Turkish names with your TR suffixed ones
 **TRSuffixHelper Kullanımı**
 
 //nhName = “Mahmut”
-Örnek localized string ->"AbcHeaderText" = "Gelişim notu girmesi için {NEWHIRE_NAME}{yönelmeHal} bildirim gönderin.";
+
+//Örnek localized string ->"AbcHeaderText" = "Gelişim notu girmesi için {NEWHIRE_NAME}{yönelmeHal} bildirim gönderin.";
 ```
 var headerText = CommonHelper.shared.getLocalizedString(key: "AbcHeaderText", lang: lang)
 //headerText = Gelişim notu girmesi için {NEWHIRE_NAME}{yönelmeHal} bildirim gönderin.
@@ -37,11 +38,12 @@ let elementsContainingName = headerTextArray.filter({$0.contains("\(nhName)")})
 ```
 
 **EK Listesi, Örnekler:**
+```
 let suffixesForNameTypeList = [
    "iyelik", //   Berkin'in
    "belirtmeHal",   //Berkin'i
    "yönelmeHal",   //Berkin'e
-]
+   ]
 //
 let iyelikEkleri = [
    "'in",   //Alp'in
@@ -67,4 +69,4 @@ let yönelmeHalEkleri = [
    "'ya",  //Arda'ya
    "'ye",   //Emre'ye
 ]
-
+```
