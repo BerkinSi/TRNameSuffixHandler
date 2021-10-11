@@ -1,6 +1,8 @@
 # TRNameSuffixHandler
-Swift file to help you localize your Turkish names with your fav suffixes
-TRSuffixHelper Kullanımı
+Swift file to help you localize your Turkish names with your TR suffixed ones
+
+
+**TRSuffixHelper Kullanımı**
 
 //nhName = “Mahmut”
 Örnek localized string ->"AbcHeaderText" = "Gelişim notu girmesi için {NEWHIRE_NAME}{yönelmeHal} bildirim gönderin.";
