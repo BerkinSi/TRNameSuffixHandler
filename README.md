@@ -4,10 +4,11 @@ TRSuffixHelper Kullanımı
 
 //nhName = “Mahmut”
 Örnek localized string ->"AbcHeaderText" = "Gelişim notu girmesi için {NEWHIRE_NAME}{yönelmeHal} bildirim gönderin.";
-
+```
 var headerText = CommonHelper.shared.getLocalizedString(key: "AbcHeaderText", lang: lang)
 
 //headerText = Gelişim notu girmesi için {NEWHIRE_NAME}{yönelmeHal} bildirim gönderin.
+
 
 headerText = headerText.replacingOccurrences(of: "{NEWHIRE_NAME}", with: nhName)
 //headerText = Gelişim notu girmesi için Mahmut{yönelmeHal} bildirim gönderin.
@@ -33,7 +34,7 @@ let nameWithSuffix = TurkishSuffixHelper.shared.getNameForTRSuffix(name: element
 	// headerText = “Gelişim notu girmesi için Mahmut’a bildirim gönderin.”
             }
 }
-
+```
 
 EK Listesi, Örnekler:
 //    let suffixesForNameTypeList = [
