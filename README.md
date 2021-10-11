@@ -6,9 +6,7 @@ TRSuffixHelper Kullanımı
 Örnek localized string ->"AbcHeaderText" = "Gelişim notu girmesi için {NEWHIRE_NAME}{yönelmeHal} bildirim gönderin.";
 ```
 var headerText = CommonHelper.shared.getLocalizedString(key: "AbcHeaderText", lang: lang)
-
 //headerText = Gelişim notu girmesi için {NEWHIRE_NAME}{yönelmeHal} bildirim gönderin.
-
 
 headerText = headerText.replacingOccurrences(of: "{NEWHIRE_NAME}", with: nhName)
 //headerText = Gelişim notu girmesi için Mahmut{yönelmeHal} bildirim gönderin.
@@ -17,21 +15,21 @@ headerText = headerText.replacingOccurrences(of: "{NEWHIRE_NAME}", with: nhName)
 //String kelimelere ayrılır
 
 let headerTextArray = infoText.components(separatedBy: " ")
-
 //headerTextArray = [ “Gelişim”, “notu”, “girmesi”, “için”, “{NEWHIRE_NAME}{yönelmeHal}”, “bildirim”, “gönderin”.]
 
-//içinde isim olan kelimeler belirlenir
+////içinde isim olan kelimeler belirlenir
+
 let elementsContainingName = headerTextArray.filter({$0.contains("\(nhName)")})
 //elementsContainingName = [“mahmut{yönelmeHal}”]
             
             for element in elementsContainingName {
-	//element = “mahmut{yönelmeHal}”
+               //element = “mahmut{yönelmeHal}”
                 
-let nameWithSuffix = TurkishSuffixHelper.shared.getNameForTRSuffix(name: element)
-	//nameWithSuffix = “Mahmut’a”
+               let nameWithSuffix = TurkishSuffixHelper.shared.getNameForTRSuffix(name: element)
+               //nameWithSuffix = “Mahmut’a”
 
                headerText = headerText.replacingOccurrences(of: element, with: nameWithSuffix)
-	// headerText = “Gelişim notu girmesi için Mahmut’a bildirim gönderin.”
+               // headerText = “Gelişim notu girmesi için Mahmut’a bildirim gönderin.”
             }
 }
 ```
